@@ -1,0 +1,106 @@
+{
+  "data": {
+    "type": "accounts",
+    "id": "2593177",
+    "attributes": {
+      "payment-type": "prepaid",
+      "unbilled-charges": null,
+      "next-billing-date": null,
+      "title": "Ms",
+      "first-name": "Joe",
+      "last-name": "Bloggs",
+      "date-of-birth": "1985-01-01",
+      "contact-number": "0404000000",
+      "email-address": "test@mivi.com",
+      "email-address-verified": false,
+      "email-subscription-status": false
+    },
+    "links": {
+      "self": "http://localhost:3000/accounts/2593177"
+    },
+    "relationships": {
+      "services": {
+        "links": {
+          "related": "http://localhost:3000/services/0468874507"
+        }
+      }
+    }
+  },
+  "included": [
+    {
+      "type": "services",
+      "id": "0468874507",
+      "attributes": {
+        "msn": "0468874507",
+        "credit": 1200,
+        "credit-expiry": "2016-11-20",
+        "data-usage-threshold": false
+      },
+      "links": {
+        "self": "http://localhost:3000/services/0468874507"
+      },
+      "relationships": {
+        "subscriptions": {
+          "links": {
+            "related": "http://localhost:3000/services/0468874507/subscriptions"
+          },
+          "data": [
+            {
+              "type": "subscriptions",
+              "id": "0468874507-0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "subscriptions",
+      "id": "0468874507-0",
+      "attributes": {
+        "included-data-balance": 52400,
+        "included-credit-balance": null,
+        "included-rollover-credit-balance": null,
+        "included-rollover-data-balance": null,
+        "included-international-talk-balance": null,
+        "expiry-date": "2016-11-19",
+        "auto-renewal": true,
+        "primary-subscription": true
+      },
+      "links": {
+        "self": "http://localhost:3000/services/0468874507/subscriptions/0468874507-0"
+      },
+      "relationships": {
+        "service": {
+          "links": {
+            "related": "http://localhost:3000/services/0468874507"
+          }
+        },
+        "product": {
+          "data": {
+            "type": "products",
+            "id": "0"
+          }
+        },
+        "downgrade": {
+          "data": null
+        }
+      }
+    },
+    {
+      "type": "products",
+      "id": "4000",
+      "attributes": {
+        "name": "UNLIMITED 7GB",
+        "included-data": null,
+        "included-credit": null,
+        "included-international-talk": null,
+        "unlimited-text": true,
+        "unlimited-talk": true,
+        "unlimited-international-text": false,
+        "unlimited-international-talk": false,
+        "price": 3990
+      }
+    }
+  ]
+}
+

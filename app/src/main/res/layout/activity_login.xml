@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+<Button
+    android:layout_centerInParent="true"
+   android:id="@+id/btn_login"
+    android:layout_width="100dp"
+    android:layout_height="50dp"
+    android:textColor="@android:color/white"
+   android:background="@color/colorPrimary"
+    android:text="Login"/>
+    <EditText
+        android:id="@+id/edit_login"
+        android:layout_above="@+id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:ellipsize="start"
+android:padding="5dp"
+        android:hint="MSNID"
+android:layout_marginBottom="20dp"
+        android:inputType="text"
+
+        android:background="@drawable/editstyle"/>
+</RelativeLayout>
